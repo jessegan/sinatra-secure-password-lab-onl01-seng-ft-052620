@@ -1,0 +1,7 @@
+<p>Your current account balance: <%=@user.balance%></p>
+
+<form method='POST' action='/withdrawal'>
+<input id='hidden' type='hidden' name='_method' value='PATCH'>
+<p><input type='number' name='amount' min='0' max='<%=@user.balance%>' step='0.01'></p>
+<p><input type='submit' value='Withdrawal'></p>
+</form>
